@@ -118,17 +118,17 @@ function PageBanner({ kicker, accentDot, accent, children, lead, media, aside, a
             background: accentDot || C.lime, color: C.navyDeep,
             padding: '8px 16px', borderRadius: 999,
             fontFamily: FOLK_DISPLAY, fontWeight: 700,
-            letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 28, fontSize: "18px"
+            letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 28, fontSize: "0.85rem"
           }}>✦ {kicker}</div>
           <h1 style={{
-            fontFamily: FOLK_DISPLAY, fontWeight: 800, fontSize: twoCol ? 104 : 132,
+            fontFamily: FOLK_DISPLAY, fontWeight: 800, fontSize: 'clamp(3rem, 8vw, 6rem)',
             lineHeight: 0.88, margin: 0, letterSpacing: '-0.02em',
             textTransform: 'uppercase'
           }}>{children}</h1>
           {lead &&
           <p style={{
-            fontFamily: FOLK_SANS, lineHeight: 1.55, maxWidth: 600,
-            opacity: 0.9, marginTop: 32, fontSize: "28px"
+            fontFamily: FOLK_SANS, lineHeight: 1.7, maxWidth: 600,
+            opacity: 0.9, marginTop: 32, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)'
           }}>{lead}</p>
           }
         </div>
@@ -263,12 +263,12 @@ function PageNosotros({ lang }) {
       <section style={{ background: C.cream, padding: '110px 56px' }}>
         <div style={{ textAlign: 'center', marginBottom: 60 }}>
           <div style={{
-              fontFamily: display, fontSize: 16, fontWeight: 700,
+              fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'uppercase',
               color: C.red, marginBottom: 14
             }}>✦ {t('DE LA COCINA AL PAÍS', 'FROM KITCHEN TO COUNTRY', lang)} ✦</div>
           <h2 style={{
-              fontFamily: display, fontSize: 88, fontWeight: 800,
+              fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
               textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
               color: C.navyDeep, lineHeight: 0.92
             }}>
@@ -285,13 +285,13 @@ function PageNosotros({ lang }) {
             }}>
               <div style={{
                 fontFamily: display, fontWeight: 700,
-                letterSpacing: '0.22em', textTransform: 'uppercase', opacity: 0.7, fontSize: "18px"
+                letterSpacing: '0.22em', textTransform: 'uppercase', opacity: 0.7, fontSize: "0.85rem"
               }}>{m.year}</div>
               <h3 style={{
-                fontFamily: display, fontSize: 56, lineHeight: 1, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', lineHeight: 1, fontWeight: 800,
                 margin: '14px 0 18px', textTransform: 'uppercase', letterSpacing: '-0.02em'
               }}>{m.title}</h3>
-              <p style={{ fontFamily: sans, lineHeight: 1.55, margin: 0, fontSize: "28px" }}>{m.body}</p>
+              <p style={{ fontFamily: sans, lineHeight: 1.7, margin: 0, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)' }}>{m.body}</p>
             </div>
             )}
         </div>
@@ -306,10 +306,10 @@ function PageNosotros({ lang }) {
             <div style={{
                 fontFamily: display, fontWeight: 700,
                 letterSpacing: '0.22em', textTransform: 'uppercase',
-                color: C.lime, marginBottom: 18, fontSize: "18px"
+                color: C.lime, marginBottom: 18, fontSize: "0.85rem"
               }}>✦ {t('NUESTRA RECETA', 'OUR RECIPE', lang)}</div>
             <h2 style={{
-                fontFamily: display, fontSize: 88, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
                 textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
                 lineHeight: 0.9
               }}>
@@ -326,10 +326,10 @@ function PageNosotros({ lang }) {
                 <div style={{
                   fontFamily: display, fontWeight: 700,
                   letterSpacing: '0.22em', textTransform: 'uppercase',
-                  color: C.lime, marginBottom: 8, fontSize: "18px"
+                  color: C.lime, marginBottom: 8, fontSize: "0.85rem"
                 }}>0{i + 1}</div>
-                <h3 style={{ fontFamily: display, fontSize: 30, fontWeight: 800, margin: 0, textTransform: 'uppercase', letterSpacing: '-0.01em' }}>{v.title}</h3>
-                <p style={{ fontFamily: sans, lineHeight: 1.55, margin: '10px 0 0', opacity: 0.85, fontSize: "28px" }}>{v.body}</p>
+                <h3 style={{ fontFamily: display, fontSize: 'clamp(1.5rem, 2.2vw, 1.9rem)', fontWeight: 800, margin: 0, textTransform: 'uppercase', letterSpacing: '-0.01em' }}>{v.title}</h3>
+                <p style={{ fontFamily: sans, lineHeight: 1.7, margin: '10px 0 0', opacity: 0.85, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)' }}>{v.body}</p>
               </div>
               )}
           </div>
@@ -365,35 +365,35 @@ function ProductDetail({ lang, product, image, side, theme }) {
       <span style={{
       fontFamily: display, fontWeight: 700,
       letterSpacing: '0.2em', textTransform: 'uppercase',
-      background: theme.badgeBg, color: theme.badgeFg, padding: '8px 16px', borderRadius: 999, fontSize: "18px"
+      background: theme.badgeBg, color: theme.badgeFg, padding: '8px 16px', borderRadius: 999, fontSize: "0.85rem"
     }}>{product.kicker} · 330ML</span>
       <h2 style={{
-      fontFamily: display, fontWeight: 800, fontSize: 120,
+      fontFamily: display, fontWeight: 800, fontSize: 'clamp(3rem, 8vw, 6rem)',
       lineHeight: 0.88, margin: '24px 0 0', textTransform: 'uppercase',
       letterSpacing: '-0.02em', color: theme.headlineFg
     }}>
         {product.titleA}<br />
         <span style={{
         color: theme.headlineAccent,
-        fontStyle: 'italic', textTransform: 'lowercase', fontSize: "64px",
+        fontStyle: 'italic', textTransform: 'lowercase', fontSize: 'clamp(1.6rem, 4vw, 2.6rem)',
         ...(product.titleBStyle || {})
       }}>{product.titleB}</span>
       </h2>
       <p style={{
-      fontFamily: sans, lineHeight: 1.55, maxWidth: 480,
-      marginTop: 24, color: theme.bodyFg, opacity: 0.9, fontSize: "28px"
+      fontFamily: sans, lineHeight: 1.7, maxWidth: 480,
+      marginTop: 24, color: theme.bodyFg, opacity: 0.9, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)'
     }}>{product.desc}</p>
 
       <div style={{ marginTop: 28 }}>
         <div style={{
-        fontFamily: display, fontSize: 16, fontWeight: 700,
+        fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
         letterSpacing: '0.22em', textTransform: 'uppercase',
         color: theme.eyebrow, marginBottom: 12
       }}>{t('Ingredientes', 'Ingredients', lang)}</div>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           {product.notes.map((n, i) =>
         <span key={i} style={{
-          fontFamily: display, fontSize: 16, fontWeight: 700,
+          fontFamily: display, fontSize: '0.8rem', fontWeight: 700,
           letterSpacing: '0.12em', textTransform: 'uppercase',
           border: `2px solid ${theme.chip}`, color: theme.headlineFg,
           padding: '8px 14px', borderRadius: 999
@@ -408,7 +408,7 @@ function ProductDetail({ lang, product, image, side, theme }) {
         background: theme.specBg, color: theme.specFg, borderRadius: 14,
         padding: '18px 18px', border: `2px solid ${theme.specBorder}`
       }}>
-            <div style={{ fontFamily: display, fontSize: 16, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', opacity: 0.7 }}>{s.label}</div>
+            <div style={{ fontFamily: display, fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', opacity: 0.7 }}>{s.label}</div>
             <div style={{ fontFamily: display, fontSize: 22, fontWeight: 800, marginTop: 6 }}>{s.value}</div>
           </div>
       )}
@@ -459,7 +459,7 @@ function PageProductos({ lang }) {
     kicker: t('SABOR 02', 'FLAVOR 02', lang),
     titleA: t('Guaná', 'Sour', lang),
     titleB: t('bana', 'sop', lang),
-    titleBStyle: { fontStyle: 'normal', textTransform: 'uppercase', fontSize: 120, color: C.navyDeep },
+    titleBStyle: { fontStyle: 'normal', textTransform: 'uppercase', fontSize: 'clamp(3rem, 8vw, 6rem)', color: C.navyDeep },
     desc: t(COPY.products[1].desc.es, COPY.products[1].desc.en, lang),
     notes: lang === 'en' ? COPY.products[1].notesEn : COPY.products[1].notes,
     specs: [
@@ -490,7 +490,7 @@ function PageProductos({ lang }) {
 
       <PageBanner
         kicker={t('Productos', 'Products', lang)}
-        media="assets/latas-hielo-crop.webp"
+        media="assets/latas-hielo-crop.png"
         wideAside
         lead={t(
           'Dos sabores, una receta. Hechos con ingredientes reales y enlatados para llegar a donde vayan.',
@@ -502,22 +502,22 @@ function PageProductos({ lang }) {
         <span style={{ color: C.lime }}>{t('Un origen.', 'One origin.', lang)}</span>
       </PageBanner>
 
-      <FolkStrip bg={C.lime} fg={C.navyDeep} text={t('330 ML · 100% NATURAL', '330 ML · 100% NATURAL', lang)} />
+      <FolkStrip bg={C.lime} fg={C.navyDeep} text={t('330 ML · CON INGREDIENTES NATURALES', '330 ML · WITH NATURAL INGREDIENTS', lang)} />
 
-      <ProductDetail lang={lang} product={horchata} image="assets/horchata-can-w.webp" side="right" theme={horchataTheme} />
-      <ProductDetail lang={lang} product={guanabana} image="assets/guanabana-can-w.webp" side="left" theme={guanabanaTheme} />
+      <ProductDetail lang={lang} product={horchata} image="assets/horchata-can-w.png" side="right" theme={horchataTheme} />
+      <ProductDetail lang={lang} product={guanabana} image="assets/guanabana-can-w.png" side="left" theme={guanabanaTheme} />
 
       {/* COMING SOON */}
       <Reveal>
       <section style={{ background: C.cream, padding: '110px 56px' }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{
-              fontFamily: display, fontSize: 16, fontWeight: 700,
+              fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'uppercase',
               color: C.red, marginBottom: 14
             }}>✦ {t('PRÓXIMAMENTE', 'COMING SOON', lang)} ✦</div>
           <h2 style={{
-              fontFamily: display, fontSize: 84, fontWeight: 800,
+              fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
               textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
               color: C.navyDeep, lineHeight: 0.92
             }}>
@@ -553,7 +553,7 @@ function PageDistribuidores({ lang }) {
     qty: '24',
     qtyLabel: t('latas / caja', 'cans / case', lang),
     lines: [
-    t('Mínimo 4 cajas', 'Minimum 4 cases', lang),
+    t('Mínimo 5 cajas', 'Minimum 5 cases', lang),
     t('2 sabores a elegir', '2 flavors to choose', lang),
     t('Entrega 5–7 días', 'Delivery 5–7 days', lang)],
 
@@ -562,7 +562,7 @@ function PageDistribuidores({ lang }) {
   {
     tag: t('NEGOCIO', 'BUSINESS', lang),
     title: t('Caja mayor', 'Wholesale case', lang),
-    qty: '600',
+    qty: '1,200',
     qtyLabel: t('latas / pack', 'cans / pack', lang),
     lines: [
     t('Precio preferencial', 'Preferred pricing', lang),
@@ -576,7 +576,7 @@ function PageDistribuidores({ lang }) {
   {
     tag: t('CADENA', 'CHAIN', lang),
     title: t('Por palet', 'By pallet', lang),
-    qty: '2400',
+    qty: '3,600',
     qtyLabel: t('latas / palet', 'cans / pallet', lang),
     lines: [
     t('Contrato anual', 'Annual contract', lang),
@@ -616,10 +616,10 @@ function PageDistribuidores({ lang }) {
           <div style={{
               fontFamily: display, fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'uppercase',
-              color: C.red, marginBottom: 14, fontSize: "18px"
+              color: C.red, marginBottom: 14, fontSize: "0.85rem"
             }}>✦ {t('TRES MANERAS DE PEDIR', 'THREE WAYS TO ORDER', lang)} ✦</div>
           <h2 style={{
-              fontFamily: display, fontSize: 84, fontWeight: 800,
+              fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
               textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
               color: C.navyDeep, lineHeight: 0.92
             }}>
@@ -641,7 +641,7 @@ function PageDistribuidores({ lang }) {
                     fontFamily: display, fontWeight: 800,
                     letterSpacing: '0.2em', textTransform: 'uppercase',
                     background: tier.accent, color: tier.bg === tier.accent ? tier.fg : C.navyDeep,
-                    padding: '6px 12px', borderRadius: 999, fontSize: "18px"
+                    padding: '6px 12px', borderRadius: 999, fontSize: "0.85rem"
                   }, background: "rgb(229, 71, 29)" }}>{tier.tag}</span>
                 {tier.featured &&
                 <span style={{
@@ -653,37 +653,37 @@ function PageDistribuidores({ lang }) {
               </div>
               <div>
                 <div style={{
-                  fontFamily: display, fontSize: 92, fontWeight: 800,
+                  fontFamily: display, fontSize: 'clamp(3.5rem, 6vw, 5rem)', fontWeight: 800,
                   lineHeight: 1, letterSpacing: '-0.04em'
                 }}>{tier.qty}</div>
                 <div style={{
                   fontFamily: display, fontWeight: 700,
-                  letterSpacing: '0.2em', textTransform: 'uppercase', opacity: 0.7, marginTop: 4, fontSize: "18px"
+                  letterSpacing: '0.2em', textTransform: 'uppercase', opacity: 0.7, marginTop: 4, fontSize: "0.85rem"
                 }}>{tier.qtyLabel}</div>
               </div>
               <h3 style={{
-                fontFamily: display, fontSize: 36, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(1.6rem, 2.4vw, 2rem)', fontWeight: 800,
                 margin: 0, textTransform: 'uppercase', letterSpacing: '-0.02em'
               }}>{tier.title}</h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {tier.lines.map((line, j) =>
                 <li key={j} style={{
                   fontFamily: sans, lineHeight: 1.4,
-                  display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: "18px"
+                  display: 'flex', alignItems: 'flex-start', gap: 10, fontSize: "0.85rem"
                 }}>
                     <span style={{ color: tier.accent, fontFamily: display, fontWeight: 800 }}>✦</span>
                     {line}
                   </li>
                 )}
               </ul>
-              <button style={{
+              <button onClick={() => window.open(LINKS.whatsapp, '_blank', 'noopener')} style={{
                 marginTop: 'auto',
                 background: tier.bg === C.cream ? C.navyDeep : C.white,
                 color: tier.bg === C.cream ? C.white : C.navyDeep,
                 border: 0, padding: '14px 22px', borderRadius: 999,
                 fontFamily: display, fontWeight: 700,
                 letterSpacing: '0.12em', textTransform: 'uppercase',
-                cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: "18px"
+                cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: "0.85rem"
               }}>{t('Cotizar', 'Get quote', lang)} {Icon.arrow(14, tier.bg === C.cream ? C.white : C.navyDeep)}</button>
             </div>
             )}
@@ -695,12 +695,12 @@ function PageDistribuidores({ lang }) {
       <Reveal>
       <section style={{ background: C.navy, color: C.white, padding: '110px 56px', borderTop: `8px solid ${C.lime}` }}>
         <div style={{
-            fontFamily: display, fontSize: 16, fontWeight: 700,
+            fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
             letterSpacing: '0.22em', textTransform: 'uppercase',
             color: C.lime, marginBottom: 18
           }}>✦ {t('CÓMO FUNCIONA', 'HOW IT WORKS', lang)}</div>
         <h2 style={{
-            fontFamily: display, fontSize: 88, fontWeight: 800,
+            fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
             textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
             lineHeight: 0.9, marginBottom: 50
           }}>
@@ -713,11 +713,11 @@ function PageDistribuidores({ lang }) {
               borderTop: `4px solid ${C.lime}`, paddingTop: 24
             }}>
               <div style={{
-                fontFamily: display, fontSize: 80, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 800,
                 color: C.lime, lineHeight: 0.9, letterSpacing: '-0.04em'
               }}>{s.n}</div>
-              <h3 style={{ fontFamily: display, fontSize: 36, fontWeight: 800, margin: '16px 0 12px', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>{s.t}</h3>
-              <p style={{ fontFamily: sans, lineHeight: 1.55, margin: 0, opacity: 0.85, fontSize: "28px" }}>{s.b}</p>
+              <h3 style={{ fontFamily: display, fontSize: 'clamp(1.6rem, 2.4vw, 2rem)', fontWeight: 800, margin: '16px 0 12px', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>{s.t}</h3>
+              <p style={{ fontFamily: sans, lineHeight: 1.7, margin: 0, opacity: 0.85, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)' }}>{s.b}</p>
             </div>
             )}
         </div>
@@ -729,7 +729,7 @@ function PageDistribuidores({ lang }) {
       <section style={{ background: C.lime, color: C.navyDeep, padding: '90px 56px', borderTop: `8px solid ${C.navyDeep}` }}>
         <div style={{ display: 'grid', gridTemplateColumns: '0.45fr 0.55fr', gap: 60, alignItems: 'center' }}>
           <h2 style={{
-              fontFamily: display, fontSize: 96, fontWeight: 800,
+              fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
               textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
               lineHeight: 0.9
             }}>
@@ -741,7 +741,7 @@ function PageDistribuidores({ lang }) {
               <div key={i} style={{
                 background: C.navyDeep, color: C.white, borderRadius: 12,
                 padding: '18px 22px',
-                fontFamily: display, fontSize: 18, fontWeight: 700,
+                fontFamily: display, fontSize: '0.95rem', fontWeight: 700,
                 letterSpacing: '0.06em', textTransform: 'uppercase',
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between'
               }}>
@@ -761,15 +761,21 @@ function PageDistribuidores({ lang }) {
 // CONTACTO
 // ────────────────────────────────────────────────────────────
 
+// Paste your real Formspree form ID here (create the form at formspree.io using
+// servicioalcliente@delaabuelita.com). It looks like: https://formspree.io/f/abcdwxyz
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgojnwor';
+
 function PageContacto({ lang }) {
   const C = FOLK;
   const display = FOLK_DISPLAY;
   const sans = FOLK_SANS;
+  const [status, setStatus] = React.useState('idle'); // idle | sending | ok | error
 
   const channels = [
-  { icon: Icon.whatsapp, label: 'WhatsApp', value: COPY.whatsapp, bg: C.lime, fg: C.navyDeep, sub: t('Pedidos rápidos · lun–vie', 'Quick orders · Mon–Fri', lang) },
-  { icon: Icon.phone, label: t('Teléfono', 'Phone', lang), value: COPY.phone, bg: C.navyDeep, fg: C.white, sub: t('8:00 – 17:00', '8:00 – 17:00', lang) },
-  { icon: Icon.mail, label: t('Correo', 'Email', lang), value: COPY.email, bg: C.white, fg: C.navyDeep, sub: t('Acuerdos comerciales', 'Commercial agreements', lang) }];
+  { icon: Icon.whatsapp, label: 'WhatsApp', value: COPY.whatsappLines[0].label, bg: C.lime, fg: C.navyDeep, href: COPY.whatsappLines[0].href, sub: t('Pedidos rápidos · lun–vie', 'Quick orders · Mon–Fri', lang) },
+  { icon: Icon.whatsapp, label: 'WhatsApp', value: COPY.whatsappLines[1].label, bg: C.white, fg: C.navyDeep, href: COPY.whatsappLines[1].href, sub: t('Línea alterna · lun–vie', 'Alternate line · Mon–Fri', lang) },
+  { icon: Icon.phone, label: t('Teléfono', 'Phone', lang), value: COPY.whatsappLines[0].label, bg: C.navyDeep, fg: C.white, href: LINKS.phone, sub: t('8:00 – 17:00', '8:00 – 17:00', lang) },
+  { icon: Icon.mail, label: t('Correo', 'Email', lang), value: COPY.email, bg: C.white, fg: C.navyDeep, href: LINKS.email, sub: t('Acuerdos comerciales', 'Commercial agreements', lang) }];
 
 
   return (
@@ -800,12 +806,12 @@ function PageContacto({ lang }) {
         <div style={{ display: 'grid', gridTemplateColumns: '0.4fr 0.6fr', gap: 60, alignItems: 'flex-start' }}>
           <div>
             <div style={{
-                fontFamily: display, fontSize: 16, fontWeight: 700,
+                fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
                 letterSpacing: '0.22em', textTransform: 'uppercase',
                 color: C.lime, marginBottom: 18
-              }}>✦ {t('TRES CANALES', 'THREE CHANNELS', lang)}</div>
+              }}>✦ {t('CUATRO CANALES', 'FOUR CHANNELS', lang)}</div>
             <h2 style={{
-                fontFamily: display, fontSize: 88, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
                 textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
                 lineHeight: 0.9
               }}>
@@ -813,20 +819,20 @@ function PageContacto({ lang }) {
               <span style={{ color: C.navyDeep }}>{t('por dónde', 'your channel', lang)}.</span>
             </h2>
             <div style={{ display: 'flex', gap: 10, marginTop: 32 }}>
-              {[Icon.instagram, Icon.facebook, Icon.tiktok].map((I, i) =>
-                <a key={i} href="#" style={{
+              {[{ I: Icon.instagram, href: LINKS.instagram }, { I: Icon.facebook, href: LINKS.facebook }, { I: Icon.tiktok, href: LINKS.tiktok }].filter((s) => s.href).map((s, i) =>
+                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" style={{
                   width: 56, height: 56, borderRadius: 16,
                   background: 'rgba(255,255,255,0.15)',
                   border: `2px solid rgba(255,255,255,0.4)`,
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   textDecoration: 'none', color: C.white
-                }}>{I(22, C.white)}</a>
+                }}>{s.I(22, C.white)}</a>
                 )}
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {channels.map((row, i) =>
-              <a key={i} href="#" style={{
+              <a key={i} href={row.href} target={row.href.startsWith('http') ? '_blank' : undefined} rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                 padding: '24px 28px', background: row.bg, color: row.fg, borderRadius: 18,
                 textDecoration: 'none'
@@ -834,7 +840,7 @@ function PageContacto({ lang }) {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
                   {row.icon(28, row.fg)}
                   <div>
-                    <div style={{ fontFamily: display, fontSize: 16, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', opacity: 0.7 }}>{row.label}</div>
+                    <div style={{ fontFamily: display, fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', opacity: 0.7 }}>{row.label}</div>
                     <div style={{ fontFamily: display, fontSize: 28, fontWeight: 800, marginTop: 4 }}>{row.value}</div>
                     <div style={{ fontFamily: sans, fontSize: 16, marginTop: 4, opacity: 0.7 }}>{row.sub}</div>
                   </div>
@@ -853,43 +859,71 @@ function PageContacto({ lang }) {
         <div style={{ display: 'grid', gridTemplateColumns: '0.6fr 0.4fr', gap: 60 }}>
           <div>
             <div style={{
-                fontFamily: display, fontSize: 16, fontWeight: 700,
+                fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
                 letterSpacing: '0.22em', textTransform: 'uppercase',
                 color: C.red, marginBottom: 18
               }}>✦ {t('FORMULARIO', 'FORM', lang)}</div>
             <h2 style={{
-                fontFamily: display, fontSize: 64, fontWeight: 800,
+                fontFamily: display, fontSize: 'clamp(2rem, 4.5vw, 3.25rem)', fontWeight: 800,
                 textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
                 color: C.navyDeep, lineHeight: 0.95
               }}>{t('Contanos qué necesitás.', 'Tell us what you need.', lang)}</h2>
 
-            <form onSubmit={(e) => e.preventDefault()} style={{
+            <form method="POST" action={FORMSPREE_ENDPOINT} onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const data = new FormData(form);
+                data.set('_replyto', (data.get('correo') || '').toString());
+                setStatus('sending');
+                try {
+                  const res = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    body: data,
+                    headers: { Accept: 'application/json' }
+                  });
+                  if (res.ok) {
+                    setStatus('ok');
+                    form.reset();
+                  } else {
+                    setStatus('error');
+                  }
+                } catch (err) {
+                  setStatus('error');
+                }
+              }} style={{
                 marginTop: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16
               }}>
-              <FolkField label={t('Nombre', 'Name', lang)} placeholder={t('Tu nombre', 'Your name', lang)} />
-              <FolkField label={t('Negocio', 'Business', lang)} placeholder={t('Tu negocio', 'Your business', lang)} />
-              <FolkField label={t('Correo', 'Email', lang)} placeholder="hola@ejemplo.com" type="email" />
-              <FolkField label={t('Teléfono', 'Phone', lang)} placeholder="+503 0000-0000" />
+              <input type="hidden" name="_subject" value="Contacto web — De La Abuelita" />
+              <FolkField name="nombre" label={t('Nombre', 'Name', lang)} placeholder={t('Tu nombre', 'Your name', lang)} required />
+              <FolkField name="negocio" label={t('Negocio', 'Business', lang)} placeholder={t('Tu negocio', 'Your business', lang)} />
+              <FolkField name="correo" label={t('Correo', 'Email', lang)} placeholder="hola@ejemplo.com" type="email" required />
+              <FolkField name="telefono" label={t('Teléfono', 'Phone', lang)} placeholder="+503 0000-0000" />
               <div style={{ gridColumn: '1 / -1' }}>
                 <FolkField
+                    name="mensaje"
                     label={t('Mensaje', 'Message', lang)}
                     placeholder={t('Contanos qué buscás, cuántas cajas y dónde estás.', 'Tell us what you need, how many cases and where you are.', lang)}
-                    textarea />
+                    textarea required />
                 
               </div>
               <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: 16 }}>
-                <button type="submit" style={{
+                <button type="submit" disabled={status === 'sending'} style={{
                     background: C.navyDeep, color: C.white, border: 0,
                     padding: '18px 30px', borderRadius: 999,
                     fontFamily: display, fontWeight: 700, fontSize: 16,
                     letterSpacing: '0.08em', textTransform: 'uppercase',
-                    cursor: 'pointer',
+                    cursor: status === 'sending' ? 'wait' : 'pointer', opacity: status === 'sending' ? 0.7 : 1,
                     display: 'inline-flex', alignItems: 'center', gap: 10
                   }}>
-                  {t('Enviar mensaje', 'Send message', lang)} {Icon.arrow(16, C.white)}
+                  {status === 'sending' ? t('Enviando…', 'Sending…', lang) : t('Enviar mensaje', 'Send message', lang)} {Icon.arrow(16, C.white)}
                 </button>
-                <span style={{ fontFamily: sans, fontSize: 16, color: `${C.navyDeep}99` }}>
-                  {t('Respondemos en 24 h hábiles.', 'We reply within 24h.', lang)}
+                <span style={{ fontFamily: sans, fontSize: 16, color:
+                    status === 'ok' ? '#2f7d32' : status === 'error' ? C.red : `${C.navyDeep}99` }}>
+                  {status === 'ok'
+                    ? t('¡Gracias! Tu mensaje fue enviado.', 'Thanks! Your message was sent.', lang)
+                    : status === 'error'
+                    ? t('No se pudo enviar. Intentá de nuevo o escribínos por WhatsApp.', 'Couldn’t send. Try again or reach us on WhatsApp.', lang)
+                    : t('Respondemos en 24 h hábiles.', 'We reply within 24h.', lang)}
                 </span>
               </div>
             </form>
@@ -917,7 +951,7 @@ function PageContacto({ lang }) {
                 background: C.red, color: C.white, borderRadius: 18,
                 padding: '24px 26px', border: `2px solid ${C.navyDeep}`
               }}>
-              <div style={{ fontFamily: display, fontSize: 16, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', opacity: 0.85 }}>
+              <div style={{ fontFamily: display, fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', opacity: 0.85 }}>
                 {t('Prensa', 'Press', lang)}
               </div>
               <div style={{ fontFamily: display, fontSize: 22, fontWeight: 800, marginTop: 6 }}>Hola@delaabuelita.com
@@ -932,7 +966,7 @@ function PageContacto({ lang }) {
 
 }
 
-function FolkField({ label, placeholder, type = 'text', textarea = false }) {
+function FolkField({ label, placeholder, type = 'text', textarea = false, name, required = false }) {
   const C = FOLK;
   const display = FOLK_DISPLAY;
   const sans = FOLK_SANS;
@@ -947,13 +981,13 @@ function FolkField({ label, placeholder, type = 'text', textarea = false }) {
   return (
     <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       <span style={{
-        fontFamily: display, fontSize: 16, fontWeight: 700,
+        fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
         letterSpacing: '0.22em', textTransform: 'uppercase',
         color: C.navyDeep
       }}>{label}</span>
       {textarea ?
-      <textarea placeholder={placeholder} style={baseStyle} /> :
-      <input type={type} placeholder={placeholder} style={baseStyle} />}
+      <textarea name={name} required={required} placeholder={placeholder} style={baseStyle} /> :
+      <input name={name} required={required} type={type} placeholder={placeholder} style={baseStyle} />}
     </label>);
 
 }
@@ -967,7 +1001,7 @@ function InfoCard({ title, rows, bg, fg, accent }) {
       border: `2px solid ${FOLK.navyDeep}`
     }}>
       <div style={{
-        fontFamily: display, fontSize: 16, fontWeight: 700,
+        fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
         letterSpacing: '0.22em', textTransform: 'uppercase',
         color: accent, marginBottom: 12
       }}>✦ {title}</div>
@@ -987,3 +1021,4 @@ window.PageNosotros = PageNosotros;
 window.PageProductos = PageProductos;
 window.PageDistribuidores = PageDistribuidores;
 window.PageContacto = PageContacto;
+window.FolkField = FolkField;

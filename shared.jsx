@@ -126,13 +126,41 @@ const Icon = {
       <path d="M5 12h14M13 6l6 6-6 6" />
     </svg>
   ),
+  leaf: (size = 24, color = 'currentColor') => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 19c8 0 14-6 14-14-8 0-14 6-14 14z" />
+      <path d="M5 19c2-5 5-8 10-10" />
+    </svg>
+  ),
+  heart: (size = 24, color = 'currentColor') => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 20s-7-4.4-9.5-9C0.8 7.6 2 4.5 5 3.7c2-.5 3.9.3 5 2 1.1-1.7 3-2.5 5-2 3 .8 4.2 3.9 2.5 7.3-2.5 4.6-9.5 9-9.5 9z" />
+    </svg>
+  ),
+  shield: (size = 24, color = 'currentColor') => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  ),
+  pin: (size = 24, color = 'currentColor') => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 21s7-6.2 7-12A7 7 0 1 0 5 9c0 5.8 7 12 7 12z" />
+      <circle cx="12" cy="9" r="2.4" />
+    </svg>
+  ),
+  quote: (size = 24, color = 'currentColor') => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={color} stroke="none">
+      <path d="M9 7c-2.8 0-5 2.2-5 5v5h5v-5H6.3C6.3 10.5 7.5 9 9 9V7zm10 0c-2.8 0-5 2.2-5 5v5h5v-5h-2.7c0-1.5 1.2-3 2.7-3V7z" />
+    </svg>
+  ),
 };
 
 // Common copy used in all three variations (kept here for parallelism).
 const COPY = {
   brand: 'De La Abuelita',
   slogan: { es: 'Tradición hecha bebida', en: 'Tradition, in a can' },
-  origin: { es: 'Hecho en El Salvador', en: 'Made in El Salvador' },
+  origin: { es: 'Ingredientes naturales, sabor real', en: 'Natural ingredients, real flavor' },
   size: '330 ml',
   nav: {
     home:    { es: 'Inicio',        en: 'Home' },
@@ -204,19 +232,59 @@ const COPY = {
   },
   phone: '+503 6977-2988 / +503 6820-7796',
   whatsapp: '+503 6977-2988 / +503 6820-7796',
+  // Both lines are real and reachable on WhatsApp — rendered as separate
+  // clickable wa.me links wherever contact details are listed.
+  whatsappLines: [
+    { label: '+503 6820-7796', href: 'https://wa.me/50368207796' },
+    { label: '+503 6977-2988', href: 'https://wa.me/50369772988' },
+  ],
   email: 'servicioalcliente@delaabuelita.com',
+
+  statsTitle: { es: 'En números', en: 'By the numbers' },
+  stats: [
+    { end: 50, suffix: '+', es: 'Años de tradición', en: 'Years of tradition' },
+    { end: 2, suffix: '', es: 'Sabores únicos', en: 'Unique flavors' },
+    { end: 100, suffix: '%', es: 'Tradición hecha bebida', en: 'Tradition in a can' },
+  ],
+
+  whyUsTitle: { es: 'Por qué elegirnos', en: 'Why choose us' },
+  whyUs: [
+    { icon: 'leaf', es: 'Con ingredientes naturales', en: 'With natural ingredients', esBody: 'Ingredientes reales, sin atajos.', enBody: 'Real ingredients, no shortcuts.' },
+    { icon: 'heart', es: 'Receta Tradicional', en: 'Traditional Recipe', esBody: 'La misma receta de la abuelita, de siempre.', enBody: 'Grandma\u2019s own recipe, unchanged.' },
+    { icon: 'shield', es: 'Sin Preservantes', en: 'No Preservatives', esBody: 'Nada artificial, solo sabor real.', enBody: 'Nothing artificial, just real flavor.' },
+    { icon: 'pin', es: 'Sabor Auténtico', en: 'Authentic Flavor', esBody: 'El sabor de siempre, sin imitaciones.', enBody: 'The flavor you remember, never imitated.' },
+  ],
+
+  testimonialsTitle: { es: 'Lo que dicen nuestros clientes', en: 'What our customers say' },
+  testimonials: [
+    { name: 'Ana Guzmán', es: 'La horchata sabe exactamente como la de mi abuela. Ya no puedo tomar otra.', en: 'The horchata tastes exactly like my grandma\u2019s. I can\u2019t drink any other.' },
+    { name: 'Carlos Meléndez', es: 'La guanábana está buenísima, fresca y no muy dulce. Siempre tengo una en la nevera.', en: 'The soursop is amazing, fresh and not too sweet. I always keep one in the fridge.' },
+    { name: 'Rosa Hernández', es: 'Se nota que es una receta de verdad. La compro para toda la familia.', en: 'You can tell it\u2019s a real recipe. I buy it for the whole family.' },
+  ],
+};
+
+// Real, clickable contact/social destinations.
+const LINKS = {
+  whatsapp: 'https://wa.me/50368207796',
+  whatsapp2: 'https://wa.me/50369772988',
+  phone: 'tel:+50368207796',
+  phone2: 'tel:+50369772988',
+  email: 'mailto:servicioalcliente@delaabuelita.com',
+  instagram: 'https://instagram.com/delaabuelita.sv',
+  facebook: 'https://www.facebook.com/profile.php?id=61591295439536',
+  tiktok: 'https://www.tiktok.com/@delaabuelita_sv?_r=1&_t=ZS-99SdgnlRRqO',
 };
 
 // Brand palette derived directly from the can artwork files.
 const BRAND = {
-  navy:      '#1D3D84',   // horchata field (sampled from artwork)
-  navyDeep:  '#172E63',   // logo navy (deeper)
+  navy:      '#1a2d6e',   // horchata field (sampled from artwork)
+  navyDeep:  '#12204f',   // logo navy (deeper)
   navyInk:   '#0E1F47',
-  redOrange: '#E5471D',   // horchata accent band
-  redDeep:   '#C73A14',
-  lime:      '#9ECA3A',   // guanabana accent
-  limeDeep:  '#7CA325',
-  cream:     '#F4ECD7',   // soursop cream field
+  redOrange: '#e84c1b',   // horchata accent band
+  redDeep:   '#c33d12',
+  lime:      '#8dc63f',   // guanabana accent
+  limeDeep:  '#6fa02c',
+  cream:     '#f5f0e8',   // soursop cream field
   paper:     '#FAF3DE',
   bone:      '#EEE6D2',
   white:     '#FFFFFF',
@@ -309,17 +377,185 @@ function BlobTop({ color, height = 120 }) {
       .dla-reveal { opacity: 1 !important; }
       .dla-reveal.dla-revealed { animation: none !important; }
     }
+    .dla-marquee-text { transition: color 260ms ease; }
+    .dla-marquee:hover .dla-marquee-text { color: var(--dla-marquee-hover, inherit); }
+    @keyframes dla-bubble-float {
+      0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+      12% { opacity: var(--dla-bubble-op, 0.5); }
+      100% { transform: translateY(-260px) translateX(var(--dla-drift, 12px)) scale(1); opacity: 0; }
+    }
+    .dla-bubble { position: absolute; bottom: -20px; border-radius: 50%; pointer-events: none; will-change: transform, opacity; animation-name: dla-bubble-float; animation-timing-function: ease-in; animation-iteration-count: infinite; }
+    @keyframes dla-lift-hint { from { transform: translateY(0); } to { transform: translateY(-2px); } }
+    .dla-lift-card { transition: transform 320ms cubic-bezier(.2,.8,.2,1), box-shadow 320ms ease; }
+    .dla-lift-card:hover { transform: translateY(-14px); box-shadow: 0 30px 55px -22px rgba(0,0,0,0.45); }
+    @keyframes dla-pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+      100% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+    }
+    .dla-wa-float { animation: dla-pulse-ring 2.2s cubic-bezier(.3,.6,.4,1) infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .dla-bubble { animation: none !important; opacity: 0 !important; }
+      .dla-wa-float { animation: none !important; }
+    }
   `;
   document.head.appendChild(el);
 })();
 
+// Floating soft bubbles for hero backgrounds. Purely decorative + reduced-motion safe.
+function HeroBubbles({ count = 16, color = 'rgba(255,255,255,0.35)' }) {
+  const bubbles = React.useMemo(() => Array.from({ length: count }).map((_, i) => ({
+    left: Math.round((i / count) * 100 + (Math.random() * 8 - 4)),
+    size: Math.round(8 + Math.random() * 22),
+    duration: (10 + Math.random() * 10).toFixed(1),
+    delay: (Math.random() * 12).toFixed(1),
+    drift: Math.round(Math.random() * 40 - 20),
+    op: (0.25 + Math.random() * 0.35).toFixed(2),
+  })), [count]);
+  return (
+    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }} aria-hidden="true">
+      {bubbles.map((b, i) => (
+        <span key={i} className="dla-bubble" style={{
+          left: `${b.left}%`,
+          width: b.size, height: b.size,
+          background: color,
+          animationDuration: `${b.duration}s`,
+          animationDelay: `${b.delay}s`,
+          ['--dla-drift']: `${b.drift}px`,
+          ['--dla-bubble-op']: b.op,
+        }} />
+      ))}
+    </div>
+  );
+}
+
+// Parallax hook — returns a translateY offset driven by scroll position, clamped
+// and dampened. Attach to a background layer's style.transform.
+function useParallax(ref, strength = 0.15) {
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let queued = false;
+    const measure = () => {
+      queued = false;
+      const rect = el.getBoundingClientRect();
+      setOffset(rect.top * strength);
+    };
+    const onScroll = () => {
+      if (queued) return;
+      queued = true;
+      // setTimeout rather than rAF so parallax keeps updating in throttled frames.
+      setTimeout(measure, 16);
+    };
+    measure();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, [ref, strength]);
+  return offset;
+}
+
+// Count-up number, triggered once when scrolled into view.
+// Uses a timer tick rather than requestAnimationFrame so the value still
+// lands correctly when rAF is throttled (background tabs, embedded frames).
+function AnimatedCounter({ end, duration = 1600, suffix = '', prefix = '', decimals = 0, style = {} }) {
+  const ref = useRef(null);
+  const [val, setVal] = useState(0);
+  const started = useRef(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === 'undefined') { setVal(end); return; }
+    let timer = null;
+    const run = () => {
+      if (started.current) return;
+      started.current = true;
+      cleanup();
+      const t0 = Date.now();
+      timer = setInterval(() => {
+        const p = Math.min(1, (Date.now() - t0) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setVal(end * eased);
+        if (p >= 1) { clearInterval(timer); timer = null; setVal(end); }
+      }, 32);
+    };
+    // Measurement-based trigger. IntersectionObserver is unreliable in some
+    // embedded/preview frames, so scroll + timed checks drive this instead.
+    const check = () => {
+      if (started.current) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (r.bottom > 0 && r.top < vh * 0.95) run();
+    };
+    const timers = [setTimeout(check, 60), setTimeout(check, 300), setTimeout(check, 900)];
+    // Low-frequency poll: covers deep-links and restored scroll positions where
+    // no scroll event is ever emitted. Stops as soon as the counter starts.
+    const poll = setInterval(() => { if (started.current) clearInterval(poll); else check(); }, 400);
+    const onScroll = () => check();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    let io = null;
+    if (typeof IntersectionObserver !== 'undefined') {
+      io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) run(); });
+      }, { threshold: 0.2 });
+      io.observe(el);
+    }
+    function cleanup() {
+      timers.forEach(clearTimeout);
+      clearInterval(poll);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (io) io.disconnect();
+    }
+    check();
+    return () => { cleanup(); if (timer) clearInterval(timer); };
+  }, [end, duration]);
+  return (
+    <span ref={ref} style={style}>{prefix}{val.toFixed(decimals)}{suffix}</span>
+  );
+}
+
+// Small circular avatar with initials — used for testimonials, no photo needed.
+function AvatarInitials({ name, bg, fg, size = 56 }) {
+  const initials = name.split(' ').filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
+  return (
+    <div style={{
+      width: size, height: size, borderRadius: '50%',
+      background: bg, color: fg,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontFamily: '"Bricolage Grotesque", sans-serif', fontWeight: 800, fontSize: size * 0.34,
+      flexShrink: 0,
+    }}>{initials}</div>
+  );
+}
+
+// Floating WhatsApp button — fixed to viewport corner, pulses gently.
+function FloatingWhatsApp({ href, label = 'WhatsApp', bg = '#25D366', fg = '#ffffff' }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+      className="dla-wa-float"
+      style={{
+        position: 'fixed', bottom: 28, right: 28, zIndex: 999,
+        width: 62, height: 62, borderRadius: '50%',
+        background: bg, color: fg,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        textDecoration: 'none', boxShadow: '0 10px 30px -8px rgba(0,0,0,0.5)',
+      }}>
+      {Icon.whatsapp(30, fg)}
+    </a>
+  );
+}
+
 // Seamless right-to-left scrolling band. Replaces the old static Strip/FolkStrip.
-function Marquee({ bg, fg, text, speed = 26, fontFamily, dot = '●' }) {
+function Marquee({ bg, bg2, fg, hoverFg, text, speed = 26, fontFamily, dot = '●' }) {
   const ff = fontFamily || '"Bricolage Grotesque", "DM Sans", system-ui, sans-serif';
   const group = (
     <div style={{ display: 'flex' }} aria-hidden="true">
       {Array.from({ length: 8 }).map((_, i) => (
-        <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 32, paddingRight: 32 }}>
+        <span key={i} className="dla-marquee-text" style={{ display: 'inline-flex', alignItems: 'center', gap: 32, paddingRight: 32 }}>
           {text} <span style={{ opacity: 0.6 }}>{dot}</span>
         </span>
       ))}
@@ -327,9 +563,11 @@ function Marquee({ bg, fg, text, speed = 26, fontFamily, dot = '●' }) {
   );
   return (
     <div className="dla-marquee" style={{
-      background: bg, color: fg, padding: '14px 0', overflow: 'hidden',
+      background: bg2 ? `linear-gradient(90deg, ${bg}, ${bg2})` : bg,
+      color: fg, padding: '14px 0', overflow: 'hidden',
       fontFamily: ff, fontWeight: 800, fontSize: 18, letterSpacing: '0.18em',
       textTransform: 'uppercase', position: 'relative',
+      ['--dla-marquee-hover']: hoverFg || fg,
     }}>
       <div className="dla-marquee-track" style={{ animationDuration: `${speed}s` }}>
         {group}
@@ -360,6 +598,12 @@ function Reveal({ children, delay = 0, y = 30, dur = 700, once = true, style = {
     };
     const t1 = requestAnimationFrame(check);
     const timers = [setTimeout(check, 80), setTimeout(check, 250), setTimeout(check, 600)];
+    // Self-clearing poll: covers deep-links, restored scroll positions and
+    // throttled frames where no scroll event is ever emitted.
+    const poll = setInterval(() => { if (done) clearInterval(poll); else check(); }, 400);
+    // Hard failsafe — Reveal gates all page content, so a missed trigger must
+    // never leave the visitor on a blank page.
+    const failsafe = setTimeout(() => { if (!done) { setShown(true); done = true; cleanup(); } }, 1500);
     let io = null;
     if (typeof IntersectionObserver !== 'undefined') {
       io = new IntersectionObserver((entries) => {
@@ -377,6 +621,8 @@ function Reveal({ children, delay = 0, y = 30, dur = 700, once = true, style = {
     function cleanup() {
       cancelAnimationFrame(t1);
       timers.forEach(clearTimeout);
+      clearInterval(poll);
+      clearTimeout(failsafe);
       if (io) io.disconnect();
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
@@ -410,4 +656,4 @@ function Reveal({ children, delay = 0, y = 30, dur = 700, once = true, style = {
   );
 }
 
-Object.assign(window, { useLang, t, Placeholder, LangToggle, Icon, COPY, BRAND, BrandLogo, LogoLockup, BlobBottom, BlobTop, Marquee, Reveal });
+Object.assign(window, { useLang, t, Placeholder, LangToggle, Icon, COPY, BRAND, BrandLogo, LogoLockup, BlobBottom, BlobTop, Marquee, Reveal, HeroBubbles, useParallax, AnimatedCounter, AvatarInitials, FloatingWhatsApp });
