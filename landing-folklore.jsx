@@ -298,7 +298,7 @@ function LandingFolklore() {
           {[
             { y: '1985', es: 'La cocina de la abuelita', en: 'Grandma\u2019s kitchen' },
             { y: '2010', es: 'La receta pasa de generaci\u00f3n', en: 'The recipe passes on' },
-            { y: '2024', es: 'Primera lata enlatada', en: 'First can produced' },
+            { y: '2024', es: 'Primera lata', en: 'First can produced' },
             { y: t('Hoy', 'Today', lang), es: 'Toda Centroam\u00e9rica', en: 'All of Central America' },
           ].map((m, i) => (
             <div key={i} style={{ position: 'relative', paddingTop: 30, textAlign: 'center' }}>

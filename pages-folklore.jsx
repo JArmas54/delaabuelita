@@ -815,8 +815,8 @@ function PageContacto({ lang }) {
                 textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
                 lineHeight: 0.9
               }}>
-              {t('Elegí', 'Pick', lang)}<br />
-              <span style={{ color: C.navyDeep }}>{t('por dónde', 'your channel', lang)}.</span>
+              {t('Opciones', 'Pick', lang)}<br />
+              <span style={{ color: C.navyDeep }}>{t('de contacto', 'your channel', lang)}</span>
             </h2>
             <div style={{ display: 'flex', gap: 10, marginTop: 32 }}>
               {[{ I: Icon.instagram, href: LINKS.instagram }, { I: Icon.facebook, href: LINKS.facebook }, { I: Icon.tiktok, href: LINKS.tiktok }].filter((s) => s.href).map((s, i) =>

@@ -174,7 +174,7 @@ const COPY = {
     es: 'La receta de la abuelita, ahora en lata. Lista para llevar, lista para servir, lista para todos.',
     en: 'Grandma\u2019s recipe, now in a can. Ready to grab, ready to serve, ready for everyone.',
   },
-  heroCtaPrimary: { es: 'Probar nuestros sabores', en: 'Taste our flavors' },
+  heroCtaPrimary: { es: 'Prueba nuestros sabores', en: 'Taste our flavors' },
   heroCtaSecondary:{ es: 'Pedidos por mayor', en: 'Wholesale orders' },
 
   // Products
@@ -209,7 +209,7 @@ const COPY = {
     en: 'Grandma was known for making the best wholesome drinks, using quality ingredients and seasonal fruit that gave them an unmatched flavor that is still with us today.\n\nOur horchata began in grandma\u2019s kitchen: with her clay comal, toasting over a wood fire the rice, the chocolate, the cinnamon and every ingredient that gives Salvadoran horchata its traditional taste and aroma.\n\nAs the grains toasted slowly, the scent drifted out of the kitchen all the way to the neighbors\u2019 houses, and they always found an excuse to drop by grandma\u2019s for a glass of cold horchata.\n\nIn grandma\u2019s backyard, every summer we waited eagerly for the guanábanas, prized for their soft texture, lovely aroma and tropical flavor.\n\nThe guanábana juices grandma made were the ones we longed for most to cool us down.',
   },
   story2: {
-    es: 'Hoy las enlatamos para que ese mismo sabor llegue a más mesas convirtiendo una tradición en bebidas, presentes en supermercados, restaurantes y tiendas sin perder ni un gramo de tradición.',
+    es: 'Hoy las enlatamos para que ese mismo sabor llegue a más mesas, convirtiendo una tradición en bebidas, presentes en supermercados, restaurantes y tiendas sin perder ni un gramo de tradición.',
     en: 'Today we can them so that same taste reaches more tables, turning a tradition into beverages found in supermarkets, restaurants and stores without losing a single ounce of tradition.',
   },
 
@@ -251,7 +251,7 @@ const COPY = {
   whyUs: [
     { icon: 'leaf', es: 'Con ingredientes naturales', en: 'With natural ingredients', esBody: 'Ingredientes reales, sin atajos.', enBody: 'Real ingredients, no shortcuts.' },
     { icon: 'heart', es: 'Receta Tradicional', en: 'Traditional Recipe', esBody: 'La misma receta de la abuelita, de siempre.', enBody: 'Grandma\u2019s own recipe, unchanged.' },
-    { icon: 'shield', es: 'Sin Preservantes', en: 'No Preservatives', esBody: 'Nada artificial, solo sabor real.', enBody: 'Nothing artificial, just real flavor.' },
+    { icon: 'shield', es: 'Listo Para Consumir', en: 'No Preservatives', esBody: 'Sin preparaciones.', enBody: 'Nothing artificial, just real flavor.' },
     { icon: 'pin', es: 'Sabor Auténtico', en: 'Authentic Flavor', esBody: 'El sabor de siempre, sin imitaciones.', enBody: 'The flavor you remember, never imitated.' },
   ],
 
