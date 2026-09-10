@@ -198,7 +198,7 @@ function LandingFolklore() {
                   padding: 20, transform: 'rotate(2deg)',
                   boxShadow: '0 24px 50px -20px rgba(0,0,0,0.4)'
                 }}>
-              <img src="assets/hero-cans-hg.png" alt=""
+              <img src="assets/hero-cans-hg.webp" alt="Latas de Horchata con Canela y Guanábana De La Abuelita, bebidas artesanales en lata de 330ml, El Salvador"
                   style={{ width: '100%', height: 540, objectFit: 'cover', borderRadius: 14, display: 'block' }} />
               <div style={{
                     fontFamily: display, fontSize: '0.85rem', fontWeight: 700,
@@ -397,7 +397,7 @@ function LandingFolklore() {
                 padding: '8px 16px', borderRadius: 999,
                 boxShadow: '0 8px 16px -6px rgba(0,0,0,0.4)'
               }}>★ {t('FAVORITO', 'FAVORITE', lang)}</span>
-              <img src="assets/horchata-can-w.png" alt=""
+              <img src="assets/horchata-can-w.webp" alt="Lata de Horchata con Canela De La Abuelita 330ml"
                   style={{ width: '100%', height: 480, objectFit: 'contain', borderRadius: 20, display: 'block', border: `4px solid ${C.white}`, background: '#ffffff' }} />
             </div>
           </div>
@@ -424,7 +424,7 @@ function LandingFolklore() {
                 padding: '8px 16px', borderRadius: 999,
                 boxShadow: '0 8px 16px -6px rgba(0,0,0,0.3)'
               }}>✦ {t('NUEVO', 'NEW', lang)}</span>
-              <img src="assets/guanabana-can-w.png" alt=""
+              <img src="assets/guanabana-can-w.webp" alt="Lata de jugo de Guanábana De La Abuelita 330ml"
                   style={{ width: '100%', height: 480, objectFit: 'contain', borderRadius: 20, display: 'block', border: `4px solid ${C.navyDeep}`, background: '#ffffff' }} />
             </div>
             <div>

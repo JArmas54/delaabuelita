@@ -86,7 +86,7 @@ function LogoBadge() {
     </div>);
 }
 
-function PageBanner({ kicker, accentDot, accent, children, lead, media, aside, asideAlign = 'center', wideAside = false }) {
+function PageBanner({ kicker, accentDot, accent, children, lead, media, mediaAlt, aside, asideAlign = 'center', wideAside = false }) {
   const C = FOLK;
   const twoCol = media || aside;
   return (
@@ -146,7 +146,7 @@ function PageBanner({ kicker, accentDot, accent, children, lead, media, aside, a
             background: C.cream, borderRadius: 24, padding: 16,
             transform: 'rotate(2deg)', boxShadow: '0 24px 50px -20px rgba(0,0,0,0.45)'
           }}>
-            <img src={media} alt=""
+            <img src={media} alt={mediaAlt}
             style={{ height: 'auto', display: 'block', borderRadius: 14, width: "100%" }} />
           </div>
         </div>
@@ -344,14 +344,14 @@ function PageNosotros({ lang }) {
 // PRODUCTOS
 // ────────────────────────────────────────────────────────────
 
-function ProductDetail({ lang, product, image, side, theme }) {
+function ProductDetail({ lang, product, image, side, theme, alt, href }) {
   const C = FOLK;
   const display = FOLK_DISPLAY;
   const sans = FOLK_SANS;
 
   const imgBlock =
   <div style={{ position: 'relative', minWidth: 0 }}>
-      <img src={image} alt=""
+      <img src={image} alt={alt}
     style={{
       width: '100%', height: 560, objectFit: 'contain',
       borderRadius: 24, display: 'block',
@@ -383,6 +383,7 @@ function ProductDetail({ lang, product, image, side, theme }) {
       fontFamily: sans, lineHeight: 1.7, maxWidth: 480,
       marginTop: 24, color: theme.bodyFg, opacity: 0.9, fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)'
     }}>{product.desc}</p>
+      {href && <a href={href} style={{ display: 'inline-block', marginTop: 16, fontFamily: sans, fontWeight: 700, color: theme.headlineAccent, textDecoration: 'underline', fontSize: '1rem' }}>{t('Ver ficha completa y dónde comprar →', 'See full product page →', lang)}</a>}
 
       <div style={{ marginTop: 28 }}>
         <div style={{
@@ -490,7 +491,8 @@ function PageProductos({ lang }) {
 
       <PageBanner
         kicker={t('Productos', 'Products', lang)}
-        media="assets/latas-hielo-crop.png"
+        media="assets/latas-hielo-crop.webp"
+        mediaAlt="Latas de Horchata con Canela y Guanábana De La Abuelita sobre hielo, bebidas artesanales en lata 330ml"
         wideAside
         lead={t(
           'Dos sabores, una receta. Hechos con ingredientes reales y enlatados para llegar a donde vayan.',
@@ -504,8 +506,8 @@ function PageProductos({ lang }) {
 
       <FolkStrip bg={C.lime} fg={C.navyDeep} text={t('330 ML · CON INGREDIENTES NATURALES', '330 ML · WITH NATURAL INGREDIENTS', lang)} />
 
-      <ProductDetail lang={lang} product={horchata} image="assets/horchata-can-w.png" side="right" theme={horchataTheme} />
-      <ProductDetail lang={lang} product={guanabana} image="assets/guanabana-can-w.png" side="left" theme={guanabanaTheme} />
+      <ProductDetail lang={lang} product={horchata} image="assets/horchata-can-w.webp" side="right" theme={horchataTheme} alt="Lata de Horchata con Canela De La Abuelita 330ml" href="/horchata-en-lata/" />
+      <ProductDetail lang={lang} product={guanabana} image="assets/guanabana-can-w.webp" side="left" theme={guanabanaTheme} alt="Lata de jugo de Guanábana De La Abuelita 330ml" href="/guanabana-en-lata/" />
 
       {/* COMING SOON */}
       <Reveal>
