@@ -169,10 +169,10 @@ const COPY = {
     wholesale:{ es: 'Distribuidores', en: 'Wholesale' },
     contact: { es: 'Contacto',      en: 'Contact' },
   },
-  heroKicker: { es: 'Bebidas artesanales', en: 'Artisan beverages' },
+  heroKicker: { es: 'Bebidas Artesanales en Lata', en: 'Artisan Canned Beverages' },
   heroLead: {
-    es: 'La receta de la abuelita, ahora en lata. Lista para llevar, lista para servir, lista para todos.',
-    en: 'Grandma\u2019s recipe, now in a can. Ready to grab, ready to serve, ready for everyone.',
+    es: 'La receta de la abuelita: horchata con canela y guan\u00e1bana en lata, bebidas tradicionales de El Salvador listas para llevar, listas para servir, listas para todos.',
+    en: 'Grandma\u2019s recipe: canned cinnamon horchata and soursop, traditional Salvadoran drinks ready to grab, ready to serve, ready for everyone.',
   },
   heroCtaPrimary: { es: 'Prueba nuestros sabores', en: 'Taste our flavors' },
   heroCtaSecondary:{ es: 'Pedidos por mayor', en: 'Wholesale orders' },

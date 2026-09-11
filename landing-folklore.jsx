@@ -387,6 +387,14 @@ function LandingFolklore() {
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}>
                 {t('Pedir Ahora', 'Order Now', lang)} {Icon.whatsapp(16, C.navyDeep)}
               </a>
+              <a href="/horchata-en-lata/"
+                style={{
+                  marginTop: 28, marginLeft: 16, display: 'inline-flex', alignItems: 'center', gap: 6,
+                  color: C.white, textDecoration: 'underline', textUnderlineOffset: 4,
+                  fontFamily: sans, fontWeight: 600, fontSize: 15
+                }}>
+                {t('Ver ficha completa', 'See full details', lang)} →
+              </a>
             </div>
             <div className="dla-lift-card" style={{ position: 'relative' }}>
               <span style={{
@@ -466,6 +474,14 @@ function LandingFolklore() {
                 onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
                 onMouseLeave={(e) => e.currentTarget.style.transform = 'none'}>
                 {t('Pedir Ahora', 'Order Now', lang)} {Icon.whatsapp(16, C.white)}
+              </a>
+              <a href="/guanabana-en-lata/"
+                style={{
+                  marginTop: 28, marginLeft: 16, display: 'inline-flex', alignItems: 'center', gap: 6,
+                  color: C.navyDeep, textDecoration: 'underline', textUnderlineOffset: 4,
+                  fontFamily: sans, fontWeight: 600, fontSize: 15
+                }}>
+                {t('Ver ficha completa', 'See full details', lang)} →
               </a>
             </div>
           </div>
