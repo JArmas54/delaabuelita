@@ -531,7 +531,7 @@ function LandingFolklore() {
             <h2 style={{
                   fontFamily: display, fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800,
                   textTransform: 'uppercase', margin: 0, letterSpacing: '-0.02em',
-                  color: C.navyDeep, lineHeight: 1.04, maxWidth: 600, width: "600px"
+                  color: C.navyDeep, lineHeight: 1.04, maxWidth: 600
                 }}>
               {t('Llevamos', 'We bring')},<br />
               <span style={{ color: C.red }}>{t('nuestra receta', 'our recipe', lang)}</span>{' '}
